@@ -50,7 +50,7 @@ define(["jquery", "backbone", "text!templates/wx.html", "text!templates/currWx.h
                 this.model.fetch({
                     success: function (model, response) {
                         console.log(response);
-                        self.$el.find('#currWx').html( response );
+                        self.$el.find('#currWx').html( 'wind: ' + response.wind.speed );
                     },
                     error: function (model, response) {
                         console.log('error getting weather')
